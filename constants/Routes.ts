@@ -1,68 +1,76 @@
-export const menuRoutes = [
+import { FontAwesome } from '@expo/vector-icons'
+
+interface MenuRoute{
+  title: string
+  icon: keyof typeof FontAwesome.glyphMap
+  name: string
+}
+
+export const menuRoutes: MenuRoute[] = [
   {
     title: 'Pull to refresh',
-    icon: 'refresh-outline',
+    icon: 'refresh',
     name: 'pull-to-refresh/index',
   },
   {
     title: 'Section List',
-    icon: 'list-outline',
+    icon: 'list-ul',
     name: 'section-list/index',
   },
   {
     title: 'Modal',
-    icon: 'copy-outline',
+    icon: 'window-maximize',
     name: 'modal/index',
   },
   {
     title: 'InfiniteScroll',
-    icon: 'download-outline',
+    icon: 'download',
     name: 'infinite-scroll/index',
   },
   {
     title: 'Slides',
-    icon: 'flower-outline',
+    icon: 'sliders',
     name: 'slides/index',
   },
   {
     title: 'Themes',
-    icon: 'flask-outline',
+    icon: 'stack-overflow',
     name: 'themes/index',
   },
 ];
 
-export const uiMenuRoutes = [
+export const uiMenuRoutes: MenuRoute[] = [
   {
     title: 'Switches',
-    icon: 'toggle-outline',
+    icon: 'toggle-down',
     name: 'switches/index',
   },
   {
     title: 'Alerts',
-    icon: 'alert-circle-outline',
+    icon: 'warning',
     name: 'alerts/index',
   },
   {
     title: 'TextInputs',
-    icon: 'document-text-outline',
+    icon: 'file-text',
     name: 'text-inputs/index',
   },
 ];
 
-export const animationMenuRoutes = [
+export const animationMenuRoutes: MenuRoute[] = [
   {
     title: 'Animation 101',
-    icon: 'cube-outline',
+    icon: 'cube',
     name: 'animation-101/index',
   },
   {
     title: 'Animation 102',
-    icon: 'albums-outline',
+    icon: 'book',
     name: 'animation-102/index',
   },
 ];
 
-export const allRoutes = [
+export const allRoutes: MenuRoute[] = [
   ...menuRoutes,
   ...uiMenuRoutes,
   ...animationMenuRoutes,
